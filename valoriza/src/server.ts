@@ -4,11 +4,12 @@ const express = require('express')
 import 'express-async-errors'
 import './database'
 import { NextFunction, Request, Response } from "express";
+import cors = require('cors')
 
 const app = express()
 app.use(express.json())
 
-
+app.use(cors())
 app.use(router)
 
 app.use(
